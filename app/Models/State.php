@@ -14,6 +14,11 @@ class State extends Model
     public $incrementing = false;
     protected $keyType = 'uuid';
 
+    protected $fillable = [
+        'name',
+        'country_id'
+    ];
+
     public function country(): BelongsTo
     {
         return $this->belongsTo(Country::class);

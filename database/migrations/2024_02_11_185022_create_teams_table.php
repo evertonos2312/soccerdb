@@ -15,8 +15,8 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->timestamps();
             $table->softDeletes();
-            $table->integer('country_id')->index();
-            $table->integer('state_id')->index();
+            $table->uuid('country_id')->index();
+            $table->uuid('state_id')->index();
             $table->string('name')->index();
             $table->string('logo')->nullable();
         });

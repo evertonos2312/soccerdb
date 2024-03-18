@@ -15,12 +15,12 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->timestamps();
             $table->softDeletes();
-            $table->integer('round_id')->index();
-            $table->integer('home_team_id')->index();
-            $table->integer('away_team_id')->index();
+            $table->uuid('round_id')->index();
+            $table->uuid('home_team_id')->index();
+            $table->uuid('away_team_id')->index();
             $table->dateTime('match_date');
-            $table->integer('home_team_goals')->default(0);
-            $table->integer('away_team_goals')->default(0);
+            $table->uuid('home_team_goals')->default(0);
+            $table->uuid('away_team_goals')->default(0);
             $table->string('result');
 
         });

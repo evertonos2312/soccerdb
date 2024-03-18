@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('group_standings', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->timestamps();
-            $table->integer('group_id')->index();
-            $table->integer('team_id')->index();
+            $table->uuid('group_id')->index();
+            $table->uuid('team_id')->index();
             $table->integer('matches_played')->default(0);
             $table->integer('wins')->default(0);
             $table->integer('draws')->default(0);

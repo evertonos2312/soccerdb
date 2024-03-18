@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('group_teams', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->timestamps();
-            $table->integer('group_id')->index();
-            $table->integer('team_id')->index();
+            $table->uuid('group_id')->index();
+            $table->uuid('team_id')->index();
         });
     }
 

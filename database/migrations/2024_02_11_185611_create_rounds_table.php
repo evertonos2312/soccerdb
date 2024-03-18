@@ -15,9 +15,9 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->timestamps();
             $table->softDeletes();
-            $table->integer('championship_id')->index();
-            $table->integer('phase_id')->index();
-            $table->integer('group_id')->index();
+            $table->uuid('championship_id')->index();
+            $table->uuid('phase_id')->index();
+            $table->uuid('group_id')->index();
             $table->integer('number');
         });
     }
